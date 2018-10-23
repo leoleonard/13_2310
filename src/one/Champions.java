@@ -1,5 +1,6 @@
 package one;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -9,7 +10,7 @@ public class Champions {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         List<Scores> scores = getData();
         sort(scores);
@@ -56,6 +57,22 @@ public class Champions {
 
     }
 
-    private static void save(String scores, List<Scores> scores1) {
+    private static void save(String name, List<Scores> scores) throws IOException {
+
+        File file = new File(name + ".csv");
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+
+        FileWriter fileWriter = new FileWriter(file);
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+        for (int i = 0; i < scores.size(); i++) {
+            String row = scores.get(i).getFirstName() + ";" + scores.get(i).getLastName() + ";" + scores.get(i).getTime() + "\n";
+            bufferedWriter.write(row);
+            bufferedWriter.close();
+        }
+        bufferedWriter.close();
+        System.out.println("File was saved");
     }
 }
