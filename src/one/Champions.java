@@ -20,10 +20,10 @@ public class Champions {
     private static List<Scores> getData() {
         List<Scores> scores = new ArrayList<>();
 
-        System.out.println("Enter the name, first name and time; to quit type STOP");
+        System.out.println("Enter the first name/last name/time; to quit type STOP");
 
         String line = null;
-        while(!(line = scanner.next()).equals("STOP")) {
+        while (!(line = scanner.next()).equals("STOP")) {
             String[] row = line.split("/");
             try {
                 scores.add(new Scores(row[0], row[1], Double.parseDouble(row[2])));
@@ -42,7 +42,7 @@ public class Champions {
         String params = null;
         do {
             System.out.println("Please choose the sort method: name - N, last name - L, time - T");
-        } while (!((params = scanner.nextLine()).equals("N") || params.equals("L") || params.equals("W") ));
+        } while (!((params = scanner.nextLine()).equals("N") || params.equals("L") || params.equals("W")));
 
 
         if (params.equals("N")) {
