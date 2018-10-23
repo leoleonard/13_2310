@@ -27,7 +27,7 @@ public class Champions {
             String[] row = line.split("/");
             try {
                 scores.add(new Scores(row[0], row[1], Double.parseDouble(row[2])));
-                System.out.println("Player added. Please enter the player score; to quit, type STOP");
+                System.out.println("Player added. Please enter the next player; to quit, type STOP");
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Please enter the valid data");
             }
