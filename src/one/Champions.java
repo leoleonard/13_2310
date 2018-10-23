@@ -52,7 +52,7 @@ public class Champions {
         } else if (params.equals("T")) {
             Collections.sort(scores, new TimeComparator());
         } else {
-            System.out.println("Niepoprawny parametr sortowania");
+            System.out.println("Wrong params, please enter again");
         }
 
     }
