@@ -72,7 +72,6 @@ public class Champions {
             bufferedWriter.write(row);
             bufferedWriter.close();
         }
-        bufferedWriter.close();
         System.out.println("File was saved");
     }
 }
