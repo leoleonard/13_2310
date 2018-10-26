@@ -20,4 +20,4 @@ stop
 Wybierz algorytm sortowania (imię/nazwisko/punkty):
 punkty
 
-Zapisano dane w pliku stats.csv.
+Zapisano dane w pliku stats.csv.# 15_2610_daty
